@@ -2,6 +2,7 @@ import java.time.LocalDate;
 
 public class App {
     public static void main(String[] args) throws Exception {
+        System.out.println("");
         System.out.println("///// Conta Bancária /////");
         Conta conta1 = new Conta();
         conta1.setNumeroConta("001");
@@ -27,6 +28,13 @@ public class App {
         conta1.transferir(conta1, conta2, 50.00);
         conta2.transferir(conta2, conta1, 10.00);
         conta1.transferir(conta1, conta2, 12.00);
+
+        conta1.sacar(conta1.getSaldo());
+        // conta1.desativarConta(conta1, "Mudança de Banco");
+        conta1.desativarConta(conta1, "Mudança de Banco");
+        System.out.println("");
+        conta1.desativarConta(conta2, "Mudança de Banco");
+        conta2.getSaldo();
 
     }
 }
