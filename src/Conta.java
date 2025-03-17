@@ -121,7 +121,7 @@ public class Conta {
             System.out.println(conta.nomeCliente);
             if (ativa && saldo == 0) {
                 ativa = false;
-                justificativa = justificativa;
+                this.justificativa = justificativa;
                 System.out.println(conta.nomeCliente + ", sua Conta foi desativada por: " + justificativa);
             } else if (!ativa) {
                 System.out.println(conta.nomeCliente + ", sua conta já está desativada, por " + justificativa);
